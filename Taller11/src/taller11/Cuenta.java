@@ -65,7 +65,8 @@ public class Cuenta {
     @Override
     public String toString() {
         String cadena = String.format("Datos De la cuenta\n"
-                + "Nombre del cliente: %s\n",
+                + "Nombre del cliente: %s\n"
+                + "------------------------------------------------------------\n",
                 obtenerNombreCliente());
 
         for (int i = 0; i < obtenerMenu().size(); i++) {

@@ -40,7 +40,8 @@ public class MenuDia extends Menu {
 
         cadena = String.format("%s\n"
                 + "Valor Del Postre: %.2f\n"
-                + "Valor bebida: %.2f\n",
+                + "Valor bebida: %.2f\n"
+                + "------------------------------------------------------------",
                 cadena,
                 valorPostre,
                 valorBebida);

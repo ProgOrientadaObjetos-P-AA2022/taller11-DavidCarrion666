@@ -40,7 +40,8 @@ public class MenuNinios extends Menu {
 
         cadena = String.format("%s\n"
                 + "Valor Helado: %.2f\n"
-                + "Valor Pastel: %.2f\n",
+                + "Valor Pastel: %.2f\n"
+                + "------------------------------------------------------------",
                 cadena,
                 valorHelado,
                 valorPastel);

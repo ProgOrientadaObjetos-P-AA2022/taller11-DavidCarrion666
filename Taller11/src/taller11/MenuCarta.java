@@ -51,7 +51,8 @@ public class MenuCarta extends Menu {
         cadena = String.format("%s\n"
                 + "Valor porcion guarnicion: %.2f\n"
                 + "Valor bebida: %.2f\n"
-                + "Porcentaje Adicional: %.2f\n",
+                + "Porcentaje Adicional: %.2f\n"
+                + "------------------------------------------------------------",
                 cadena,
                 valorPorcionGuarnicio,
                 valorBebida,

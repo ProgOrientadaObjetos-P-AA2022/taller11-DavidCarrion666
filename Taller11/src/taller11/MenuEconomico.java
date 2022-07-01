@@ -30,7 +30,8 @@ public class MenuEconomico extends Menu {
         String cadena = String.format("Menu Economico\n%s\n", super.toString());
 
         cadena = String.format("%s\n"
-                + "Descuento: %.2f\n",
+                + "Descuento: %.2f\n"
+                + "------------------------------------------------------------",
                 cadena,
                 descuento);
         return cadena;
