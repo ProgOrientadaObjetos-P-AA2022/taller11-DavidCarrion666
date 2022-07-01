@@ -35,13 +35,13 @@ public class MenuCarta extends Menu {
     }
 
     public void establecerPorcentajeAdicional(double p) {
-        porcentajeAdicional = (p * obtenerValorMenu()) / 100;
+        porcentajeAdicional = p;
     }
 
     @Override
     public void establecerValorCancelarTotal() {
-        valorMenu = (valorInicialMenu + valorPorcionGuarnicio + valorBebida)
-                + porcentajeAdicional;
+        valorMenu = valorInicialMenu + valorPorcionGuarnicio + valorBebida;        
+        valorMenu = valorMenu + ((porcentajeAdicional * valorMenu)/ 100);
     }
 
     @Override
