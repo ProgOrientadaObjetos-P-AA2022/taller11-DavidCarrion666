@@ -36,15 +36,17 @@ public class MenuNinios extends Menu {
 
     @Override
     public String toString() {
-        String cadena = String.format("Menu Para Ninios\n%s\n", super.toString());
+        String cadena = String.format("Menu Para Ninios\n%s", super.toString());
 
-        cadena = String.format("%s\n"
-                + "Valor Helado: %.2f\n"
-                + "Valor Pastel: %.2f\n"
+        cadena = String.format("%s"
+                + "\tValor Helado: %.2f\n"
+                + "\tValor Pastel: %.2f\n"
+                + "\tValor Del Menu:  %.2f\n"
                 + "------------------------------------------------------------",
                 cadena,
                 valorHelado,
-                valorPastel);
+                valorPastel,
+                valorMenu);
         return cadena;
     }
 }

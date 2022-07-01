@@ -22,8 +22,10 @@ public class Cuenta {
         return subtotal;
     }
 
-    public void establecerSubtotal(double s) {
-        subtotal = s;
+    public void establecerSubtotal() {
+        for (int i = 0; i < menu.size(); i++) {
+            subtotal = subtotal + menu.get(i).obtenerValorMenu();
+        }
     }
 
     public ArrayList<Menu> obtenerMenu() {
@@ -46,8 +48,8 @@ public class Cuenta {
         return iva;
     }
 
-    public void establecerIva() {
-        iva = 0.10;
+    public void establecerIva(double d) {
+        iva = d;
     }
 
     public double obtenerValorCancelarTotal() {
@@ -55,11 +57,8 @@ public class Cuenta {
     }
 
     public void establecerValorCancelar() {
-        for (int i = 0; i < menu.size(); i++) {
-            subtotal = subtotal + menu.get(i).obtenerValorMenu();
-        }
-        iva = subtotal * iva;
-        valorCancelarTotal = subtotal + iva;
+            
+        valorCancelarTotal = subtotal + ((iva * subtotal) / 100);
     }
 
     @Override
@@ -78,11 +77,11 @@ public class Cuenta {
         cadena = String.format("\n%s"
                 + "Subtotal: %.2f\n"
                 + "Valor Del IVA: %.2f\n"
-                + "Total a pagar: %.2f\n",
+                + "Total a pagar: %.2f",
                 cadena,
-                obtenerSubtotal(),
+                subtotal,
                 obtenerIva(),
-                obtenerValorCancelarTotal());
+                valorCancelarTotal);
 
         return cadena;
     }

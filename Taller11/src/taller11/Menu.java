@@ -43,11 +43,10 @@ public abstract class Menu {
     @Override
     public String toString() {
         String c = String.format(""
-                + "Nombre del plato: %s\n"
-                + "Valor del menu inicial: %.2f\n",
+                + "\tNombre del plato: %s\n"
+                + "\tValor del menu inicial: %.2f\n",
                  obtenerNombPlato(),
-                 obtenerValorInicialM()
-        );
+                 obtenerValorInicialM());
         return c;
     }
 }

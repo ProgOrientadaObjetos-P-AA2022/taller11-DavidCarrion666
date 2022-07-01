@@ -10,30 +10,33 @@ package taller11;
  */
 public class MenuEconomico extends Menu {
 
-    protected double descuento;
+    private double descuento;
 
     public double obtenerDescuento() {
         return descuento;
     }
 
     public void establecerDescuento(double d) {
-        descuento = (d * valorInicialMenu) / 100;
+        descuento = d;
     }
 
     @Override
     public void establecerValorCancelarTotal() {
-        valorMenu = valorInicialMenu - descuento;
+
+        valorMenu = valorInicialMenu - ((descuento * valorInicialMenu) / 100);
     }
 
     @Override
     public String toString() {
-        String cadena = String.format("Menu Economico\n%s\n", super.toString());
+        String cadena = String.format("Menu Economico\n%s", super.toString());
 
-        cadena = String.format("%s\n"
-                + "Descuento: %.2f\n"
+        cadena = String.format("%s"
+                + "\tDescuento: %.2f\n"
+                + "\tValor Del Menu: %.2f\n"
                 + "------------------------------------------------------------",
                 cadena,
-                descuento);
+                obtenerDescuento(),
+                valorMenu);
         return cadena;
     }
 }
