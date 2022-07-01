@@ -13,6 +13,12 @@ public class MenuDia extends Menu {
     private double valorPostre;
     private double valorBebida;
 
+    MenuDia(String nombrePlato, double valorMenu, double vP, double vB) {
+        super(nombrePlato, valorMenu);
+        valorPostre = vP;
+        valorBebida = vB;
+    }
+
     public double obtenerValorPostre() {
         return valorPostre;
     }

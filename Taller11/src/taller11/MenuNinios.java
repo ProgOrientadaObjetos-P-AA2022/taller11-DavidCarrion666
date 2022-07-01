@@ -13,6 +13,12 @@ public class MenuNinios extends Menu {
     private double valorHelado;
     private double valorPastel;
 
+    public MenuNinios(String nombrePlato, double valorMenu, double vH, double vP) {
+        super(nombrePlato, valorMenu);
+        valorHelado = vH;
+        valorPastel = vP;
+    }
+
     public double obtenerValorHelado() {
         return valorHelado;
     }
@@ -49,4 +55,5 @@ public class MenuNinios extends Menu {
                 valorMenu);
         return cadena;
     }
+
 }

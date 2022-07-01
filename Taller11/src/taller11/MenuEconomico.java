@@ -11,6 +11,11 @@ package taller11;
 public class MenuEconomico extends Menu {
 
     private double descuento;
+    
+     MenuEconomico (String nombrePlato, double valorMenu, double d) {
+        super(nombrePlato, valorMenu);
+        descuento = d;
+    }
 
     public double obtenerDescuento() {
         return descuento;

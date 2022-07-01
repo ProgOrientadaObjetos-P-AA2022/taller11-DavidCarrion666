@@ -13,6 +13,13 @@ public class MenuCarta extends Menu {
     private double valorPorcionGuarnicio;
     private double valorBebida;
     private double porcentajeAdicional;
+    
+     MenuCarta(String nombrePlato, double valorMenu, double vP, double vB, double p) {
+        super(nombrePlato, valorMenu);
+        valorPorcionGuarnicio = vP;
+        valorBebida = vB;
+        porcentajeAdicional = p;
+    }
 
     public double obtenerValorPorcionGuarnicio() {
         return valorPorcionGuarnicio;

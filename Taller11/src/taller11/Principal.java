@@ -25,42 +25,22 @@ public class Principal {
         c.establecerNombreCliente("David Carrion");
 
         //-------------------------------------------------------------------
-        MenuNinios menuNinios1 = new MenuNinios();
-        MenuNinios menuNinios2 = new MenuNinios();
-        menuNinios1.establecerNomPlato("Cajita Feliz");
-        menuNinios1.establecerValorInicialM(7);
-        menuNinios1.establecerValorHelado(1.50);
-        menuNinios1.establecerValorPastel(2.50);
+        MenuNinios menuNinios1 = new MenuNinios("Cajita Feliz", 7, 1.50, 2.50);
         menuNinios1.establecerValorCancelarTotal();
-
-        menuNinios2.establecerNomPlato("Croquetas");
-        menuNinios2.establecerValorInicialM(3.50);
-        menuNinios2.establecerValorHelado(1.50);
-        menuNinios2.establecerValorPastel(2.50);
+        
+        MenuNinios menuNinios2 = new MenuNinios("Croquetas",3.50,1.50,2.50);
         menuNinios2.establecerValorCancelarTotal();
 
         //-------------------------------------------------------------------
-        MenuEconomico menuEcono = new MenuEconomico();
-        menuEcono.establecerNomPlato("Camarones");
-        menuEcono.establecerValorInicialM(1);
-        menuEcono.establecerDescuento(20);
+        MenuEconomico menuEcono = new MenuEconomico("Camarones",1,20);
         menuEcono.establecerValorCancelarTotal();
 
         //-------------------------------------------------------------------
-        MenuDia menuDia = new MenuDia();
-        menuDia.establecerNomPlato("Tacos");
-        menuDia.establecerValorInicialM(4);
-        menuDia.establecerValorPostre(2);
-        menuDia.establecerValorBebida(1.50);
+        MenuDia menuDia = new MenuDia("Tacos",4,2,1.50);
         menuDia.establecerValorCancelarTotal();
 
         //-------------------------------------------------------------------
-        MenuCarta menuCarta = new MenuCarta();
-        menuCarta.establecerNomPlato("Asado Argentino");
-        menuCarta.establecerValorInicialM(5);
-        menuCarta.establecerValorPorcionGuarnicio(4.50);
-        menuCarta.establecerValorBebida(1);
-        menuCarta.establecerPorcentajeAdicional(15);
+        MenuCarta menuCarta = new MenuCarta("Asado Argentino",5,4.50,1,15);
         menuCarta.establecerValorCancelarTotal();
 
         //-------------------------------------------------------------------
@@ -69,6 +49,8 @@ public class Principal {
         menus.add(menuNinios1);
         menus.add(menuNinios2);
         menus.add(menuEcono);
+        c.establecerSubtotal();
+        c.establecerIva(10);
         c.establecerValorCancelar();
         System.out.println("------------------------------------------------");
         System.out.println(c);

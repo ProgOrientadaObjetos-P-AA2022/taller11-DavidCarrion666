@@ -21,43 +21,24 @@ public class Ejecutor1 {
         c.establecerNombreCliente("Rene Elizalde");
 
         // -------------------------------------------------------------------
-        MenuNinios menuNinios1 = new MenuNinios();
-        menuNinios1.establecerNomPlato("Ninio 01");
+        MenuNinios menuNinios1 = new MenuNinios("Ninio 01", 2.00, 1.00, 1.50);
         menuNinios1.establecerValorInicialM(2.00);
-        menuNinios1.establecerValorHelado(1.00);
-        menuNinios1.establecerValorPastel(1.50);
         menuNinios1.establecerValorCancelarTotal();
 
         // -------------------------------------------------------------------
-        MenuNinios menuNinios2 = new MenuNinios();
-        menuNinios2.establecerNomPlato("Ninio 02");
-        menuNinios2.establecerValorInicialM(3.00);
-        menuNinios2.establecerValorHelado(1.00);
-        menuNinios2.establecerValorPastel(1.50);
+        MenuNinios menuNinios2 = new MenuNinios("Ninio 02", 3.00, 1.00, 1.50);
         menuNinios2.establecerValorCancelarTotal();
 
         // ------------------------------------------------------------------
-        MenuEconomico menuEco = new MenuEconomico();
-        menuEco.establecerNomPlato("Econo 001");
-        menuEco.establecerValorInicialM(4.00);
-        menuEco.establecerDescuento(25.00);
+        MenuEconomico menuEco = new MenuEconomico("Econo 001", 4.00, 25.00);
         menuEco.establecerValorCancelarTotal();
 
         // -------------------------------------------------------------------
-        MenuDia menuDia1 = new MenuDia();
-        menuDia1.establecerNomPlato("Dia 001");
-        menuDia1.establecerValorInicialM(5.00);
-        menuDia1.establecerValorPostre(1.00);
-        menuDia1.establecerValorBebida(1.00);
+        MenuDia menuDia1 = new MenuDia("Dia 001", 5.00, 1.00, 1.00);
         menuDia1.establecerValorCancelarTotal();
 
         // -------------------------------------------------------------------
-        MenuCarta menucarta = new MenuCarta();
-        menucarta.establecerNomPlato("Carta 001");
-        menucarta.establecerValorInicialM(6.0);
-        menucarta.establecerValorPorcionGuarnicio(1.50);
-        menucarta.establecerValorBebida(2.00);
-        menucarta.establecerPorcentajeAdicional(10.00);
+        MenuCarta menucarta = new MenuCarta("Carta 001", 6.0, 1.50, 2.00, 10.00);
         menucarta.establecerValorCancelarTotal();
 
         menus.add(menuNinios1);
@@ -65,6 +46,7 @@ public class Ejecutor1 {
         menus.add(menuEco);
         menus.add(menuDia1);
         menus.add(menucarta);
+
         c.establecerSubtotal();
         c.establecerIva(10);
         c.establecerValorCancelar();
