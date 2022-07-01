@@ -18,6 +18,16 @@ public class Cuenta {
     protected double subtotal;
     protected ArrayList<Menu> menu;
 
+    public Cuenta(String n, ArrayList lista, int i) {
+        nombreCliente = n;
+        menu = lista;
+        iva = i;
+    }
+
+    public Cuenta() {
+       
+    }
+
     public double obtenerSubtotal() {
         return subtotal;
     }
@@ -57,7 +67,7 @@ public class Cuenta {
     }
 
     public void establecerValorCancelar() {
-            
+
         valorCancelarTotal = subtotal + ((iva * subtotal) / 100);
     }
 
